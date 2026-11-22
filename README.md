@@ -72,13 +72,15 @@ python3 tests/check_skills.py     # frontmatter·필수 절(근거 절차·지�
 - [kr-sti-data](https://github.com/parkjui92/kr-sti-data) — KOSIS·NABOSTATS 예산·집행 시계열(`budget-trend-read` 입력)
 - [kr-grant-trace](https://github.com/parkjui92/kr-grant-trace) — 과제번호 → OpenAlex 논문(`impact-claim-check`의 논문 성과 하한)
 - [fact-verify](https://github.com/parkjui92/fact-verify) — 출처 원문 대조
-- [budget-review](https://github.com/parkjui92/budget-review) — 국회 예결산 검토보고서 팀(착안사항 전체)
 
 ## 한계
 
 - 스킬은 **문서를 읽고 판정**합니다. 데이터로 효과를 추정하는 일(인과추론)은 범위 밖입니다
 - 통합 성과평가의 세부 지표·배점, KISTEP 특정평가 세부 지침은 공개 원문 미확보 — 확보되면 `references/`에 쪽을 적어 넣습니다
 - 시범 실행은 안내서가 스스로 든 '보완이 필요한 사례'와 공개 특정평가 보고서 1건으로만 했습니다(`docs/`). 실제 사업설명자료 1건 완주는 미검증
+  - → 0.2.0(2026-11-22): 과기정통부 2026년 예산 사업설명자료로 여섯 스킬을 모두 돌리고, 스킬 없이 맡긴 결과와 견줘 지침을 고쳤습니다([현장 시험 기록](docs/field-test-20261122.md)). 지어낸 수치는 0건이었고, 문서 안의 결함(산정 방식 변경 뒤 낮아진 목표, 표끼리 다른 실적, 다른 사업의 평가가 이 사업 절에 놓인 것 등)을 잡았습니다. 시험 사업은 바이오 분야 2건뿐입니다
+- 같은 모델에 스킬 없이 맡겨도 문서 안 숫자 불일치는 대부분 잡습니다. 스킬이 더하는 것은 판정의 근거 절, 지표·주장 단위의 빠짐없는 표, 모르는 것을 `[확인 필요]`·미분해 잔차로 남기는 규율입니다
+- 안내서의 사업유형별 핵심성과 표 내용은 스킬에 들어 있지 않습니다. 그 표를 함께 주지 않으면 유형 적합 판정은 `잠정`입니다
 
 ## R&D 정책평가 도구 묶음에서의 위치
 
